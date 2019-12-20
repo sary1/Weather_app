@@ -9,7 +9,7 @@ const forecast = (lat, long, callback) => {
     } else if (body.error) {
       console.log("Weather body error", undefined);
     } else {
-      const exp = `Weather is: ${body.hourly.data[0].summary}. \nIt is currently ${body.currently.temperature} degrees out. \nThere is ${body.currently.precipProbability}% chance of rain.`;
+      const exp = `Weather is: ${body.hourly.data[0].summary}. \nIt is currently ${body.currently.temperature} degrees out. \nThere is ${body.currently.precipProbability}% chance of rain. Humidity is: ${body.currently.humidity}`;
       callback(undefined, exp);
     }
   });
